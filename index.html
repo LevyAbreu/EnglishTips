@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishTips - Descomplicando o Inglês</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra Institucional IFAM -->
+<div class="ifam-banner">
+    <img src="https://s3.sa-east-1.amazonaws.com/files.ifam.edu.br/images/logo_f_simple.png" alt="Logo IFAM" class="ifam-logo">
+    <div class="course-info">
+        <i class="fas fa-code"></i>
+        <span>Curso Técnico em Desenvolvimento de Sistemas - IFAM</span>
+    </div>
+</div>
+
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-graduation-cap"></i> EnglishTips</h1>
+            <p>Descomplicando o aprendizado da língua inglesa</p>
+            <div class="header-buttons">
+                <button class="btn-primary" onclick="scrollToSection('about')">
+                    <i class="fas fa-info-circle"></i> Sobre
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('content')">
+                    <i class="fas fa-play"></i> Conteúdo
+                </button>
+            </div>
+            
+            <!-- Botões de autenticação -->
+            <div class="auth-buttons" id="authButtons">
+                <a href="login.html" class="auth-btn-link login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Entrar
+                </a>
+                <a href="register.html" class="auth-btn-link register-btn">
+                    <i class="fas fa-user-plus"></i> Cadastrar
+                </a>
+            </div>
+            
+            <!-- Menu do usuário logado -->
+            <div class="user-menu" id="userMenu" style="display: none;">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="userName">Usuário</span>
+                </div>
+                <div class="user-dropdown">
+                    <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    <a href="#" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about" id="about">
+            <h2><i class="fas fa-lightbulb"></i> Sobre o EnglishTips</h2>
+            <p>O EnglishTips foi um projeto desenvolvido como trabalho de conclusão de curso, em parceria com a professora Andreza. A proposta da plataforma era descomplicar o aprendizado da língua inglesa por meio de conteúdos acessíveis e envolventes, voltados especialmente para o público jovem.</p>
+            
+            <p>O sistema oferecia vídeos produzidos por alunos, além de exercícios e artigos elaborados pela própria professora, promovendo um aprendizado mais próximo da realidade dos estudantes e utilizando uma linguagem simples e atual.</p>
+            
+            <p>Apesar de ter sido descontinuado após sua fase acadêmica, o projeto destacou-se pela abordagem colaborativa e pela proposta de tornar o inglês mais acessível por meio da tecnologia e da comunicação entre pares.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h3>Colaborativo</h3>
+                    <p>Conteúdo criado por alunos para alunos</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Acessível</h3>
+                    <p>Linguagem simples e atual</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <h3>Envolvente</h3>
+                    <p>Aprendizado próximo da realidade</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content" id="content">
+            <h2><i class="fas fa-book-open"></i> Conteúdo</h2>
+            
+            <div class="content-grid">
+                <div class="video-section">
+                    <h3><i class="fas fa-video"></i> Vídeos</h3>
+                    <p>Vídeos produzidos por alunos para um aprendizado dinâmico e divertido.</p>
+                    <div class="video-placeholder" onclick="showComingSoon('vídeos')">
+                        <i class="fas fa-play-circle"></i>
+                        <p>Em breve, vídeos incríveis!</p>
+                        <small>Clique para saber mais</small>
+                    </div>
+                </div>
+
+                <div class="exercise-section">
+                    <h3><i class="fas fa-pencil-alt"></i> Exercícios</h3>
+                    <p>Exercícios práticos elaborados para fixar o conteúdo.</p>
+                    <div class="exercise-placeholder" onclick="showComingSoon('exercícios')">
+                        <i class="fas fa-tasks"></i>
+                        <p>Em breve, exercícios desafiadores!</p>
+                        <small>Clique para saber mais</small>
+                    </div>
+                </div>
+
+                <div class="article-section">
+                    <h3><i class="fas fa-newspaper"></i> Artigos</h3>
+                    <p>Artigos informativos e envolventes para aprofundar seus conhecimentos.</p>
+                    <div class="article-placeholder" onclick="showComingSoon('artigos')">
+                        <i class="fas fa-file-alt"></i>
+                        <p>Em breve, artigos interessantes!</p>
+                        <small>Clique para saber mais</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <h2><i class="fas fa-chart-bar"></i> Impacto do Projeto</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>500+</h3>
+                    <p>Estudantes Alcançados</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-video"></i>
+                    <h3>50+</h3>
+                    <p>Vídeos Produzidos</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-tasks"></i>
+                    <h3>100+</h3>
+                    <p>Exercícios Criados</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>30+</h3>
+                    <p>Artigos Publicados</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2021 EnglishTips. Todos os direitos reservados.</p>
+            <p>Projeto desenvolvido para a facilitação do aprendizado da lingua inglesa.</p>
+            <div class="footer-links">
+                <a href="#" onclick="showInfo()"><i class="fas fa-info"></i> Mais Informações</a>
+                <a href="#" onclick="showContact()"><i class="fas fa-envelope"></i> Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

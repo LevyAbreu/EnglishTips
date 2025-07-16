@@ -3,6 +3,7 @@
 ## Descrição
 
 O EnglishTips é um site desenvolvido para representar uma plataforma educacional de aprendizado de inglês. O projeto foi criado com base na descrição de um trabalho de conclusão de curso desenvolvido em parceria com a professora Andreza.
+> 💻 Acesse a versão online: [EnglishTips]([https://levyabreu.github.io/HealthHub/](https://levyabreu.github.io/EnglishTips/))
 
 ## Características do Site
 
